@@ -1,15 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import {Formik, Form, Field, ErrorMessage} from 'formik';
 import './style.css';
 import {initialValues, UserInfoSchema, handleSubmit} from './formSettings';
-
+import orcsom from './../../assets/orcsom2.png';
 
 function Register() {
-    // // const [formName, setFormName] = useState("");
-    // // const [formUserName, setFormUserName] = useState("");
-    // // const [formEmail, setFormEmail] = useState("");
-    // const [formPassword, setFormPassword] = useState("");
-    // const [confirmPassword, setConfirmPassword] = useState("");
     
     return (
         <div className="main">
@@ -24,67 +19,34 @@ function Register() {
                 validationSchema={UserInfoSchema}
                 >
                     <Form id="form-container">
-                        <Field type="name" name="name" placeholder="Nome" className="input-data" />
-                        <ErrorMessage name="name" component="div" className="errorField" />
-                        <Field type="name" name="userName" placeholder="User" className="input-data" />
-                        <ErrorMessage name="userName" component="div" className="errorField" />
-                        <Field type="email" name="email" placeholder="Email" className="input-data"/>
-                        <ErrorMessage name="email" component="div" className="errorField" />
-                        <Field name="password" type="password" placeholder="Senha" className="input-data"></Field>
-                        <ErrorMessage name="password" component="div" className="errorField" />
-                        <Field name="passwordConfirmation" type="password" placeholder="Confirmar Senha" className="input-data"></Field>
-                        <ErrorMessage name="passwordConfirmation" component="div" className="errorField" />
+                        <div className="input-item">
+                            <Field type="name" name="name" placeholder="Nome" className="input-data" />
+                            <ErrorMessage name="name" component="div" className="errorField" />
+                        </div>
+                        <div className="input-item">
+                            <Field type="name" name="userName" placeholder="User" className="input-data" />
+                            <ErrorMessage name="userName" component="div" className="errorField" />
+                        </div>
+                        <div className="input-item">
+                            <Field type="email" name="email" placeholder="Email" className="input-data"/>
+                            <ErrorMessage name="email" component="div" className="errorField" />
+                        </div>
+                        <div className="input-item">
+                            <Field name="password" type="password" placeholder="Senha" className="input-data"></Field>
+                            <ErrorMessage name="password" component="div" className="errorField" />
+                        </div>
+                        <div className="input-item">
+                            <Field name="passwordConfirmation" type="password" placeholder="Confirmar senha" className="input-data"></Field>
+                            <ErrorMessage name="passwordConfirmation" component="div" className="errorField" />
+                        </div>
                         <button className="btn-confirm" type="submit">Cadastrar</button>
                         <div className="forgotPassword">
                             <p>Uau, esqueci que já tenho uma conta :P</p>
                         </div>
                     </Form>
                 </Formik>
-
-                
-                    {/* <div className="wrapper">
-                        <div className="input-data">
-                            <input type="text" className="text" required />
-                            <div className="underline">
-                            </div>
-                            <label>Nome</label>
-                        </div>
-                    </div>
-                    <div className="wrapper">
-                        <div className="input-data">
-                            <input type="text" className="text" required />
-                            <div className="underline">
-                            </div>
-                            <label>Username</label>
-                        </div>
-                    </div>
-                    <div className="wrapper">
-                        <div className="input-data">
-                            <input type="text" className="text" required />
-                            <div className="underline">
-                            </div>
-                            <label>E-mail</label>
-                        </div>
-                    </div>
-                    <div className="wrapper">
-                        <div className="input-data">
-                            <input type="password" className="text" required />
-                            <div className="underline">
-                            </div>
-                            <label>Senha</label>
-                        </div>
-                    </div>
-                    <div className="wrapper">
-                        <div className="input-data">
-                            <input type="password" className="text" required />
-                            <div className="underline">
-                            </div>
-                            <label>Confirmar senha</label>
-                        </div>
-                    </div> */}
-
-                
-                
+              <img src={orcsom} alt="orcinho" className="orc-img"/>
+    
             </div>
         </div>
     )

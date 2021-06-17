@@ -3,14 +3,14 @@
 *{
     margin:0;
     padding:0;
-    background-color: #70E864;
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
 }
 
  .main{
     width: 100%;
-    height: 100vh;
+    background-color: #70E864;
+    height: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -22,6 +22,7 @@
     width: 50%;
     height: 100%;
     margin-top: 5%;
+    margin-bottom: 3%;
     display: flex;
     flex-direction: column;
     background: #fff;
@@ -29,39 +30,27 @@
     border-radius: 15px;
 }
 
+
 .register-form h1{
     align-self: center;
-    background-color: #fff;
     text-align: center;
     margin-top: 5%;
     font-size: 1.8rem;
 
 }
 
-.form-container {
+#form-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 15%;
-  width: 80%;
-  background-color: #fff;
+  margin-top: 5%;
+  width: 100%;
 }
 
 form#form-container{
   width: 70%;
-  background-color: #fff;
   margin-bottom: 10%;
 }
-
-/* form#form-container .input-data .underline{
-  position: absolute;
-  bottom: 0px;
-  height: 2px;
-  width: 100%;
-  background: #00000004;
-} */
-
-
 
 .input-data{
   background-color: #fff;
@@ -71,8 +60,8 @@ form#form-container{
 }
 
 .errorField{
-  background-color: #fff;
   font-size: 0.8rem;
+  
 }
 
 form#form-container input{
@@ -84,20 +73,10 @@ form#form-container input{
   outline:none;
 }
 
-/* .input-data{
-  background-color: #fff;
-  position: absolute;
-  bottom:10px;
-  left: 0px;
-  color:grey;
-  pointer-events: none;
-  transition: all 0.3s ease;
+.input-item{
+  margin-bottom: 8%;
+  width: 80%;
 }
-
-.input-data input:valid  {
-  transform: translateY(-20px);
-  font-size: 0.8rem;
-} */
 
 .btn-confirm{
   width: 60%;
@@ -109,7 +88,6 @@ form#form-container input{
   border-color: #6AE01A;
   border-style: solid;
   transition: 0.5s;
-
 }
 
 .btn-confirm:hover{
@@ -136,4 +114,16 @@ form#form-container input{
 .forgotPassword p:hover{
   cursor: pointer;
   color:#6AE01A;
+}
+
+.orc-img{
+  position: absolute;
+  width: 20%;
+  margin-left: 25%;
+}
+
+@-moz-document url-prefix() {
+  .orc-img {
+    margin-left: 50%;
+  }
 }
