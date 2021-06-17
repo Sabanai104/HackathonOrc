@@ -14,7 +14,6 @@ function Register() {
                 initialValues={initialValues}
                 onSubmit={(values) => {
                     handleSubmit(values);
-                    console.log(values);
                 }}
                 validationSchema={UserInfoSchema}
                 >
