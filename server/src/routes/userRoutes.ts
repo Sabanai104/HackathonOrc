@@ -5,6 +5,10 @@ const userRoutes = Router();
 
 const userController = new UserController;
 
+userRoutes.post('/authenticate', (req,res)=>{
+    userController.authenticateUser(req,res);
+})
+
 userRoutes.post('/', (req, res) => {
     userController.createUser(req, res);
 });
