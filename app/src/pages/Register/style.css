@@ -1,43 +1,41 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap");
 
-
-*{
-    margin:0;
-    padding:0;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
 }
 
- .main{
-    width: 100%;
-    background-color: #70E864;
-    min-height: 100vh;
-    padding:1rem 0;
-    height:min-content;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-}  
-
-.register-form{
-    align-items: center;
-    width: 50%;
-    height: min-content;
-    margin:auto;
-    display: flex;
-    flex-direction: column;
-    background: #fff;
-    box-shadow: 6px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 15px;
+.main {
+  width: 100%;
+  background-color: #70e864;
+  min-height: 100vh;
+  padding: 1rem 0;
+  height: min-content;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.register-form h1{
-    align-self: center;
-    text-align: center;
-    margin-top: 5%;
-    font-size: 1.8rem;
+.register-form {
+  align-items: center;
+  width: 50%;
+  height: min-content;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  box-shadow: 6px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+}
 
+.register-form h1 {
+  align-self: center;
+  text-align: center;
+  margin-top: 5%;
+  font-size: 1.8rem;
 }
 
 #form-container {
@@ -48,76 +46,73 @@
   width: 100%;
 }
 
-form#form-container{
+form#form-container {
   width: 70%;
   margin-bottom: 10%;
 }
 
-.input-data{
+.input-data {
   background-color: #fff;
   position: relative;
   width: 100%;
-
 }
 
-.errorField{
+.errorField {
   font-size: 0.8rem;
-  
 }
 
-form#form-container input{
+form#form-container input {
   background-color: #fff;
   width: 100%;
-  border:none;
+  border: none;
   font-size: 17px;
   border-bottom: 2px solid #0000001a;
-  outline:none;
+  outline: none;
 }
 
-.input-item{
+.input-item {
   margin-bottom: 8%;
   width: 80%;
 }
 
-.btn-confirm{
+.btn-confirm {
   width: 60%;
   height: 60px;
   font-size: 1.2rem;
   font-weight: bold;
-  color:#70E864;
+  color: #70e864;
   background-color: #fff;
-  border-color: #6AE01A;
+  border-color: #6ae01a;
   border-style: solid;
-  transition: 0.5s;
+  transition: 0.3s;
 }
 
-.btn-confirm:hover{
-  background-color: #6AE01A;
+.btn-confirm:hover {
+  background-color: #6ae01a;
   font-weight: bold;
-  transition: 0.5s;
-  color:#fff;
+  transition: 0.3s;
+  color: #fff;
   cursor: pointer;
 }
 
-.forgotPassword{
+.forgotPassword {
   background-color: #fff;
-  margin-top:1.2rem;
+  margin-top: 1.2rem;
 }
 
-.forgotPassword p{
+.forgotPassword a {
   background-color: #fff;
-  text-decoration-line: underline;
-  color:#61ca1c;
+  color: #61ca1c;
   font-weight: bold;
   font-size: 0.9rem;
 }
 
-.forgotPassword p:hover{
+.forgotPassword a:hover {
   cursor: pointer;
-  color:#6AE01A;
+  color: #6ae01a;
 }
 
-.orc-img{
+.orc-img {
   position: absolute;
   width: 20%;
   margin-left: 25%;

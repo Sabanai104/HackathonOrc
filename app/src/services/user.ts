@@ -15,5 +15,13 @@ async function CreateUser(
     });
     return response.data;
 }
+async function authenticateUser(email:String,password:String){
+    const response = await api.post("/user/authenticate",{
+        email,
+        password
+    })
+    
+    return response.data;
+}
 
-export { CreateUser };
+export { CreateUser,authenticateUser};

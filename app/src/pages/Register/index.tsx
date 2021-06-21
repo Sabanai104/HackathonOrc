@@ -40,7 +40,7 @@ function Register() {
                         </div>
                         <button className="btn-confirm" type="submit">Cadastrar</button>
                         <div className="forgotPassword">
-                            <p>Uau, esqueci que já tenho uma conta :P</p>
+                            <a href="/login">Uau, esqueci que já tenho uma conta :P</a>
                         </div>
                     </Form>
                 </Formik>

@@ -1,4 +1,3 @@
-import { Request } from 'express-serve-static-core';
 import * as jwt from 'jsonwebtoken';
 import * as auth from '../config/jwt.json';
 

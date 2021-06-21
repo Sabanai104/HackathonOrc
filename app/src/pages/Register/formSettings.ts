@@ -1,5 +1,5 @@
 import * as Yup from 'yup';
-import { CreateUser } from './../../services/createUser';
+import { CreateUser } from './../../services/user';
 
 export const initialValues = {
     name: '',
