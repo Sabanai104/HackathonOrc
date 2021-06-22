@@ -6,19 +6,17 @@ import User from '../models/userSchema'
 
 
 class PostController {
-    async createPost(req: Request, res: Response) {
+    async createPost(req: Request, res: Response): Promise<Response> {
         const { id } = req.params;
-        const { posts, index} = req.body;
+        
         try {
-            await Post.create(req.body);
+           const post =  await Post.create(req.body);
+           await User.findByIdAndUpdate(id,{$addToSet:{myposts:post.id}})
             const findUser: any = await User.findById(id);
             if (!findUser) {
                 res.status(400).send({ error: "Usuário não encontrado" })
             }
-            var itens = [...findUser.myposts, { posts: posts,_id: `${findUser.myposts.length}` }];
-
-
-            await findUser.updateOne({ myposts: itens });
+           
             
 
 
@@ -67,7 +65,7 @@ class PostController {
     }
     async deletePost(req: Request, res: Response) {
         const { id } = req.params;
-        // const { _id } = req.params;
+        
         try {
             await Post.findByIdAndDelete(id);
             res.status(200).send({ message: "Post deletado com sucesso!" })

@@ -15,7 +15,7 @@ const UserSchema:any = new Schema({
         unique: true
     },
     myposts:[{
-        type:Schema.Types.Mixed
+        type:Schema.Types.ObjectId
     }]
 
     });
