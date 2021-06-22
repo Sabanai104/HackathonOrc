@@ -14,10 +14,10 @@ const UserSchema:any = new Schema({
         required: true,
         unique: true
     },
-    myposts:{
-        type:[]
-    }
+    myposts:[{
+        type:Schema.Types.Mixed
+    }]
 
     });
 
-export default model("User", UserSchema)
+export default model('User', UserSchema)

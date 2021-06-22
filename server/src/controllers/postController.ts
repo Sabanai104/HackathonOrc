@@ -4,17 +4,25 @@ import User from '../models/userSchema'
 
 
 
+
 class PostController {
     async createPost(req: Request, res: Response) {
         const { id } = req.params;
+        const { posts, index} = req.body;
         try {
             await Post.create(req.body);
-            const findUser = await User.findById(id);
+            const findUser: any = await User.findById(id);
             if (!findUser) {
                 res.status(400).send({ error: "Usuário não encontrado" })
             }
-            await findUser.updateOne(req.body);
-            res.status(200).send({ messange: "Post criado com sucesso!" })
+            var itens = [...findUser.myposts, { posts: posts,_id: `${findUser.myposts.length}` }];
+
+
+            await findUser.updateOne({ myposts: itens });
+            
+
+
+            return res.status(200).send({ message: "Post criado com sucesso!" })
 
 
         } catch (error) {
@@ -42,25 +50,16 @@ class PostController {
 
         }
     }
-    async addPost(req: Request, res: Response) {
-        // const { id } = req.params;
-        const { name, username, posts } = req.body
+    async updatePost(req: Request, res: Response) {
+        const { id } = req.params;
         try {
-            const addPosts:any = await User.findOne({
-                name,
-                username
-            })
+            const findPost = await Post.findById(id)
 
-            if (!addPosts) {
-                res.status(400).send({ erro: "Usuário inexistente" });
+            if (!findPost) {
+                res.status(400).send({ erro: "Post inexistente" });
             }
-            
-            var itens = [{ posts: posts }, ...addPosts];
-            
-
-            const updatedList = await addPosts.updateOne({ myposts: itens });
-            
-            return res.status(200).send({updatedList})
+            await findPost.updateOne(req.body)
+            return res.status(200).send({ message: "Post atualizado com sucesso" })
 
         } catch (error) {
             res.status(400).send({ error: error.message })
@@ -68,11 +67,12 @@ class PostController {
     }
     async deletePost(req: Request, res: Response) {
         const { id } = req.params;
+        // const { _id } = req.params;
         try {
             await Post.findByIdAndDelete(id);
             res.status(200).send({ message: "Post deletado com sucesso!" })
         } catch (error) {
-            res.status(400).send({ error: "Falha ao deletar post" })
+            res.status(400).send({ error: error.message })
         }
     }
 }

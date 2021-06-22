@@ -9,7 +9,6 @@ class UserController {
             const newUser = await User.create({
                 "name":name,
                 "username":username,
-                "myposts":[],
             })
 
             return res.status(200).send(newUser);
