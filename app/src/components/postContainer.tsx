@@ -1,23 +1,19 @@
 import React from "react"
+import { FaRegHeart } from "react-icons/fa";
 
-interface IUser {
-    name: string;
-    username: string;
-    
-}
 
 const PostBox = ({username,myposts}:{
     myposts: string,
-    username: IUser
+    username: string
 } ) => {
 
 
     return (
         <div className='postcontainer'>
             <p className='usernamecontainer'>{username}</p>
-            <h2> {myposts}</h2>
+            <p className= "postinput"> {myposts}</p>
             <br></br>
-            <button className='submitbutton' >POSTAR</button>
+            <FaRegHeart className="heartbutton"/>
         </div>
     );
 } 

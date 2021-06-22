@@ -4,12 +4,17 @@ import PostContainer from "../../components/postContainer";
 import api from "../../services/api";
 import "./index.css"
 
-
+interface IUser {
+    name: string;
+    username: string;
+    
+}
 
 
 function MainPage() {
 
     const [user, setUser] = useState([]);
+    const [post, setPost] = useState([]);
     
     const getUser = async () => {
         try {
@@ -19,8 +24,18 @@ function MainPage() {
             console.log(error.message)
         }
     };
+    const getPost = async () => {
+        try {
+            const _post = await api.get("post/all");
+            setPost(_post.data.response);
+        } catch (error) {
+            console.log(error.message)
+        }
+    };
+   
     useEffect(()=>{
         getUser();
+        getPost()
     },[]);
     return (
         <div className='page'>
@@ -31,16 +46,19 @@ function MainPage() {
                 <div className='username'><span>DENIZINHODAQUEBRADA</span></div>
 
                 <div className='iconlocation'>
-                <button onClick = {()=> {console.log(user)}}></button>
-                    <a className='links' href=''><img className='icon' src='usericon.png' alt='icon'></img>Home</a>
-                    <a className='links' href=''><img className='icon' src='homeicon4.png' alt='icon'></img>Perfil</a>
+               
+                    
+                    <a className='links' href=''><img className='icon' src='homeicon4.png' alt='icon'></img>Home</a>
+                    <a className='links' href=''><img className='icon' src='usericon.png' alt='icon'></img>Sair</a>
                 </div>
 
             </section>
 
-                <CreatePost name = "Roberto" username= "Carlos" ></CreatePost>
-                {user?.map(({username,myposts})=>{
-                    return(<PostContainer username= {username}  myposts = {myposts}></PostContainer>)
+                <CreatePost userId = "60d1f0d947b8d2001a9217ce" username= "Carlos" ></CreatePost>
+                
+                {post?.map(({posts,userId}:{posts:string, userId:IUser})=>{
+                   return(<PostContainer myposts={posts} username={userId?.username}></PostContainer>);
+                    
                 })}
         </div>
     )

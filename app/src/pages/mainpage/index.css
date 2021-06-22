@@ -54,6 +54,7 @@
     width: 1.6vw;
     height: 1.6vw;
     margin-right: 0.7vw;
+    color:solid #70E864 ;
     
 }
 
@@ -123,6 +124,39 @@
     margin-left: 32vw;
     margin-top: 1.5vh;
     border:2px #6AE01A solid;
+    cursor:pointer;
+    transition: 1s;
+
+}
+
+.heartbutton{
+    font-family: Roboto;
+    font-weight: 600;
+    font-size: 0.8vw;
+    width: 4vw;
+    height: 5.5vh;
+    background-color: #ffffff;
+   
+    color: #000000;
+    margin-left: 38vw;
+    margin-top: 1.5vh;
+    border: 0;
+    cursor:pointer;
+
+}
+.heartbutton:hover{
+    font-family: Roboto;
+    font-weight: 600;
+    font-size: 0.8vw;
+    width: 8vw;
+    height: 5.5vh;
+    background-color: #e21a0b;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    color:#000000;
+    margin-left: 32vw;
+    margin-top: 1.5vh;
+    border:2px #0c0c0c solid;
     cursor:pointer;
     transition: 1s;
 
