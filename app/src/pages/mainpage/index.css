@@ -14,7 +14,7 @@
 
 .sidebar{
     /* background-color: blue; */
-    width: 20vw;
+    width: 17vw;
     height: 100vh;
     border-right: 1px solid black;
     position: fixed
@@ -23,9 +23,18 @@
 .namepos{
     font-family: Roboto;
     font-weight: 500;
-    font-size: 2.5vw;
+    font-size: 2.6vw;
     text-align: start;
     padding-top: 20%;
+    margin-left: 4vw;
+}
+
+.namepos1{
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 1.8vw;
+    text-align: start;
+    padding-top: 0.1%;
     margin-left: 4vw;
 }
 
@@ -50,13 +59,39 @@
     margin-top: 2vh;
 }
 
+.links1{
+    overflow-y: hidden;
+    text-decoration: none;
+    color:black;
+    display: block;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.4vw;
+    text-align: center;
+    margin-left: -1.4vw;
+    margin-top: 2vh;
+}
+
 .icon{
     width: 1.6vw;
     height: 1.6vw;
-    margin-right: 0.7vw;
+    margin-right: 1.5vw;
     color:solid #70E864 ;
     
 }
+
+.icon1{
+    /* margin-top:-0.5vh; */
+    width: 1.8vw;
+    height: 1.8vw;
+    margin-right: 1.5vw;
+    color:solid #70E864 ;
+    
+}
+
+
+
 
 .postcontainer{
     display: inline-block;
@@ -65,7 +100,7 @@
     background-color:#FFFFFF;
     border: 2px solid #70E864;
     box-shadow: 4px 3px 4px rgba(0, 0, 0, 0.25);
-    margin-left: 39%;
+    margin-left: 37%;
     margin-top: 4%;
     border-radius: 10px;
     overflow-y:hidden;
@@ -136,7 +171,7 @@
     width: 4vw;
     height: 5.5vh;
     background-color: #ffffff;
-   
+    transition: 1s;
     color: #000000;
     margin-left: 38vw;
     margin-top: 1.5vh;

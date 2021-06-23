@@ -42,14 +42,13 @@ function MainPage() {
 
             <section className='sidebar' >
 
-                <p className='namepos'>Denniel <br></br> William</p>
+                <p className='namepos'>Denniel</p>
+                <p className='namepos1'>William</p>
                 <div className='username'><span>DENIZINHODAQUEBRADA</span></div>
 
                 <div className='iconlocation'>
-               
-                    
                     <a className='links' href=''><img className='icon' src='homeicon4.png' alt='icon'></img>Home</a>
-                    <a className='links' href=''><img className='icon' src='usericon.png' alt='icon'></img>Sair</a>
+                    <a className='links1' href=''><img className='icon1' src='usericon.png' alt='icon'></img>Sair</a>
                 </div>
 
             </section>
